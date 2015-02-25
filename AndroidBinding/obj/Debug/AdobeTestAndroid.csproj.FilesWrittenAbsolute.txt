@@ -1,0 +1,6 @@
+/Users/richard/Projects/Xamarin/Tesco/AdobeTargetTestAndroid/AdobeTestAndroid/AdobeTestAndroid/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/richard/Projects/Xamarin/Tesco/AdobeTargetTestAndroid/AdobeTestAndroid/AdobeTestAndroid/obj/Debug/AdobeTestAndroid.Jars.adobeMobileLibrary.jar
+/Users/richard/Projects/Xamarin/Tesco/AdobeTargetTestAndroid/AdobeTestAndroid/AdobeTestAndroid/bin/Debug/AdobeTestAndroid.dll.mdb
+/Users/richard/Projects/Xamarin/Tesco/AdobeTargetTestAndroid/AdobeTestAndroid/AdobeTestAndroid/bin/Debug/AdobeTestAndroid.dll
+/Users/richard/Projects/Xamarin/Tesco/AdobeTargetTestAndroid/AdobeTestAndroid/AdobeTestAndroid/obj/Debug/AdobeTestAndroid.dll
+/Users/richard/Projects/Xamarin/Tesco/AdobeTargetTestAndroid/AdobeTestAndroid/AdobeTestAndroid/obj/Debug/AdobeTestAndroid.dll.mdb

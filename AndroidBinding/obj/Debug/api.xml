@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="com.adobe.mobile">
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AbstractDatabaseBacking" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="initDatabaseBacking" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="initializeDatabase" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="postMigrate" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="postReset" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="preMigrate" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="prepareStatements" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="resetDatabase" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="database" static="false" transient="false" type="android.database.sqlite.SQLiteDatabase" type-generic-aware="android.database.sqlite.SQLiteDatabase" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="dbMutex" static="false" transient="false" type="java.lang.Object" type-generic-aware="java.lang.Object" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="AbstractDatabaseBacking.CorruptedDatabaseException" static="true" visibility="protected">
+<constructor deprecated="not deprecated" final="false" name="AbstractDatabaseBacking.CorruptedDatabaseException" static="false" type="com.adobe.mobile.AbstractDatabaseBacking.CorruptedDatabaseException" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="android.app.Activity" extends-generic-aware="android.app.Activity" final="false" name="AdobeMarketingActivity" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="AdobeMarketingActivity" static="false" type="com.adobe.mobile.AdobeMarketingActivity" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCreate" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.os.Bundle">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onPause" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onResume" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Analytics" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Analytics" static="false" type="com.adobe.mobile.Analytics" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearBeacon" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearQueue" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getQueueSize" native="false" return="long" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTrackingIdentifier" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="processReferrer" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="android.content.Intent">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="sendQueuedHits" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackAction" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackBeacon" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="com.adobe.mobile.Analytics.BEACON_PROXIMITY">
+</parameter>
+<parameter name="p4" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackLifetimeValueIncrease" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.math.BigDecimal">
+</parameter>
+<parameter name="p1" type="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackLocation" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.location.Location">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackState" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionEnd" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.Analytics.TimedActionBlock&lt;java.lang.Boolean&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionStart" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionUpdate" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackingTimedActionExists" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.1" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.10" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.11" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.12" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.Long&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.13" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.14" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.15" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.2" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.3" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.4" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.5" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.6" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.7" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.8" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Analytics.9" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.adobe.mobile.Analytics.BEACON_PROXIMITY&gt;" final="true" name="Analytics.BEACON_PROXIMITY" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.adobe.mobile.Analytics.BEACON_PROXIMITY" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.adobe.mobile.Analytics.BEACON_PROXIMITY[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="PROXIMITY_FAR" static="true" transient="false" type="com.adobe.mobile.Analytics.BEACON_PROXIMITY" type-generic-aware="com.adobe.mobile.Analytics.BEACON_PROXIMITY" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROXIMITY_IMMEDIATE" static="true" transient="false" type="com.adobe.mobile.Analytics.BEACON_PROXIMITY" type-generic-aware="com.adobe.mobile.Analytics.BEACON_PROXIMITY" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROXIMITY_NEAR" static="true" transient="false" type="com.adobe.mobile.Analytics.BEACON_PROXIMITY" type-generic-aware="com.adobe.mobile.Analytics.BEACON_PROXIMITY" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROXIMITY_UNKNOWN" static="true" transient="false" type="com.adobe.mobile.Analytics.BEACON_PROXIMITY" type-generic-aware="com.adobe.mobile.Analytics.BEACON_PROXIMITY" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Analytics.TimedActionBlock" static="true" visibility="public">
+<typeParameters>
+<typeParameter name="Boolean"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="call" native="false" return="Boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTimedAction" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="AnalyticsTimedAction" static="false" type="com.adobe.mobile.AnalyticsTimedAction" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="long">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</constructor>
+<field deprecated="not deprecated" final="false" name="adjustedStartTime" static="false" transient="false" type="long" type-generic-aware="long" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="contextData" static="false" transient="false" type="java.util.Map" type-generic-aware="java.util.Map&lt;java.lang.String, java.lang.Object&gt;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="databaseID" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="startTime" static="false" transient="false" type="long" type-generic-aware="long" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackAction" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="trackAction" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackBeacon" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="clearBeacon" native="false" return="void" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackBeacon" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="com.adobe.mobile.Analytics.BEACON_PROXIMITY">
+</parameter>
+<parameter name="p4" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackCoordinateSpace" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="trackCoordinateSpace" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="float">
+</parameter>
+<parameter name="p2" type="float">
+</parameter>
+<parameter name="p3" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackInternal" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="trackInternal" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackInternal" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p2" type="long">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackLifetimeValueIncrease" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="getLifetimeValue" native="false" return="java.math.BigDecimal" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLifetimeValue" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.math.BigDecimal">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackLifetimeValueIncrease" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.math.BigDecimal">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="LTV_AMOUNT_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.ltv.amount&quot;" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackLocation" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="trackLocation" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.location.Location">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AnalyticsTrackState" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="trackState" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.AbstractDatabaseBacking" extends-generic-aware="com.adobe.mobile.AbstractDatabaseBacking" final="true" name="AnalyticsTrackTimedAction" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="initializeDatabase" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="preMigrate" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="prepareStatements" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionEnd" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.Analytics.TimedActionBlock&lt;java.lang.Boolean&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionExists" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionStart" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionUpdate" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionUpdateActionsClearAdjustedStartTime" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="trackTimedActionUpdateAdjustedStartTime" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="long">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AnalyticsTrackTimedAction.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.AbstractDatabaseBacking" extends-generic-aware="com.adobe.mobile.AbstractDatabaseBacking" final="true" name="AnalyticsWorker" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="AnalyticsWorker" static="false" type="com.adobe.mobile.AnalyticsWorker" visibility="protected">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearTrackingQueue" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="forceKick" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTrackingQueueSize" native="false" return="long" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initializeDatabase" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="kick" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="kickWithReferrerData" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="networkConnectivity" native="false" return="boolean" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="postReset" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="preMigrate" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="prepareStatements" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="queue" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="startNotifier" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="android.content.BroadcastReceiver" extends-generic-aware="android.content.BroadcastReceiver" final="false" name="AnalyticsWorker.1" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="onReceive" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="android.content.Intent">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AnalyticsWorker.Hit" static="true" visibility="protected">
+<constructor deprecated="not deprecated" final="false" name="AnalyticsWorker.Hit" static="false" type="com.adobe.mobile.AnalyticsWorker.Hit" visibility="protected">
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.util.TimerTask" extends-generic-aware="java.util.TimerTask" final="false" name="AnalyticsWorker.ReferrerTimeoutTask" static="false" visibility="protected">
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AnalyticsWorker.WorkerThreadRunner" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AudienceManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="AudienceManager" static="false" type="com.adobe.mobile.AudienceManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDpid" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDpuuid" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getVisitorProfile" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="reset" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDpidAndDpuuid" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="signalWithData" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.AudienceManager.AudienceManagerCallback&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt;">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="AudienceManager.AudienceManagerCallback" static="true" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="call" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AudienceManagerWorker" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="GetDpid" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="GetDpuuid" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="GetVisitorProfile" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="Reset" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="SetDpidAndDpuuid" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="SubmitSignal" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.AudienceManager.AudienceManagerCallback&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.1" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.2" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.3" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.4" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.5" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.SubmitSignalTask" static="true" visibility="public">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="AudienceManagerWorker.SubmitSignalTask" static="false" type="com.adobe.mobile.AudienceManagerWorker.SubmitSignalTask" visibility="public">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.AudienceManager.AudienceManagerCallback&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="callback" static="false" transient="false" type="com.adobe.mobile.AudienceManager.AudienceManagerCallback" type-generic-aware="com.adobe.mobile.AudienceManager.AudienceManagerCallback&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="data" static="false" transient="false" type="java.util.Map" type-generic-aware="java.util.Map&lt;java.lang.String, java.lang.Object&gt;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudienceManagerWorker.SubmitSignalTask.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Config" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Config" static="false" type="com.adobe.mobile.Config" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="collectLifecycleData" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="collectLifecycleData" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDebugLogging" native="false" return="java.lang.Boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLifetimeValue" native="false" return="java.math.BigDecimal" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPrivacyStatus" native="false" return="com.adobe.mobile.MobilePrivacyStatus" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUserIdentifier" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getVersion" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="overrideConfigStream" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.io.InputStream">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pauseCollectingLifecycleData" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setContext" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDebugLogging" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLargeIconResourceId" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrivacyStatus" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MobilePrivacyStatus">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSmallIconResourceId" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setUserIdentifier" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.1" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;com.adobe.mobile.MobilePrivacyStatus&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.adobe.mobile.MobilePrivacyStatus" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.10" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.2" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.3" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.4" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.5" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.math.BigDecimal&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.math.BigDecimal" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.6" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.7" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.8" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.9" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ContextData" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="containsKey" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="contextData" static="false" transient="false" type="java.util.HashMap" type-generic-aware="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="value" static="false" transient="false" type="java.lang.Object" type-generic-aware="java.lang.Object" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Lifecycle" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="addReferralDataToSavedLifecycle" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getContextData" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getContextDataLowercase" native="false" return="java.util.Map&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="true" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="true" name="CAMPAIGN_REFERRER_CAMPAIGN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.referrer.campaign.name&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CAMPAIGN_REFERRER_CONTENT" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.referrer.campaign.content&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CAMPAIGN_REFERRER_MEDIUM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.referrer.campaign.medium&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CAMPAIGN_REFERRER_SOURCE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.referrer.campaign.source&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CAMPAIGN_REFERRER_TERM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.referrer.campaign.term&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CAMPAIGN_REFERRER_TRACKINGCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.referrer.campaign.trackingcode&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_LIFECYCLE_DATA" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ADMS_LifecycleData&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_REFERRER_TRACKINGCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;trackingcode&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_REFERRER_UTM_CAMPAIGN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;utm_campaign&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_REFERRER_UTM_CONTENT" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;utm_content&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_REFERRER_UTM_MEDIUM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;utm_medium&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_REFERRER_UTM_SOURCE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;utm_source&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_REFERRER_UTM_TERM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;utm_term&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULTS_KEY_STARTDATE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ADMS_SessionStart&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DYNAMIC_KEY_REFERRER_TRACKINGCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;D=trackingcode&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DYNAMIC_KEY_REFERRER_UTM_CAMPAIGN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;D=utm_campaign&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DYNAMIC_KEY_REFERRER_UTM_CONTENT" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;D=utm_content&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DYNAMIC_KEY_REFERRER_UTM_MEDIUM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;D=utm_medium&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DYNAMIC_KEY_REFERRER_UTM_SOURCE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;D=utm_source&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DYNAMIC_KEY_REFERRER_UTM_TERM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;D=utm_term&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAX_SESSION_LENGTH" static="true" transient="false" type="int" type-generic-aware="int" value="604800" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="lifecycleHasRun" static="true" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="true">
+</field>
+<field deprecated="not deprecated" final="false" name="sessionStartTime" static="true" transient="false" type="long" type-generic-aware="long" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Media" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Media" static="false" type="com.adobe.mobile.Media" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="adSettingsWith" native="false" return="com.adobe.mobile.MediaSettings" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+<parameter name="p4" type="java.lang.String">
+</parameter>
+<parameter name="p5" type="double">
+</parameter>
+<parameter name="p6" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="click" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="complete" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="open" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MediaSettings">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.Media.MediaCallback">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="play" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="settingsWith" native="false" return="com.adobe.mobile.MediaSettings" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="track" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.1" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.2" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.3" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.4" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.5" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.6" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Media.7" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Media.MediaCallback" static="true" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="call" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MediaAnalytics" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="click" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="clone" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="protected">
+<exception name="CloneNotSupportedException" type="java.lang.CloneNotSupportedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="complete" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="monitor" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="open" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="com.adobe.mobile.MediaSettings">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.Media.MediaCallback">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="play" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setTrackCalledOnItem" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="track" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="LIVE_EVENT_LENGTH" static="true" transient="false" type="double" type-generic-aware="double" value="-1.000000000000000" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="completeCloseOffsetThreshold" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="trackSeconds" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaEventType" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaEventType" static="false" type="com.adobe.mobile.MediaEventType" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="MediaEventTypeClick" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MediaEventTypeClose" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MediaEventTypeComplete" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MediaEventTypeMonitor" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MediaEventTypePlay" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MediaEventTypeStop" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MediaEventTypeTrack" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MediaItem" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="MediaItem" static="false" type="com.adobe.mobile.MediaItem" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MediaSettings">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.MediaAnalytics">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="double">
+</parameter>
+<parameter name="p4" type="java.lang.String">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="click" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="false" return="void" static="false" synchronized="true" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="complete" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLength" native="false" return="double" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPlayerID" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPlayerName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getReportMediaState" native="false" return="com.adobe.mobile.MediaState" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTrackSecondsThreshold" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isCompleteTracked" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isCurrentOffsetPastCompleteThreshold" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isLive" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isPlaying" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isSegmentByMilestones" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isSegmentByOffsetMilestones" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="monitor" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="play" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setCompleteCloseOffsetThreshold" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setCompleteTracked" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSegmentByMilestones" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSegmentByOffsetMilestones" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setTrackSecondsThreshold" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="startMonitor" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stopMonitor" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="false" name="CPM" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="callback" static="false" transient="false" type="com.adobe.mobile.Media.MediaCallback" type-generic-aware="com.adobe.mobile.Media.MediaCallback&lt;com.adobe.mobile.MediaState&gt;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="channel" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="currentMediaState" static="false" transient="false" type="com.adobe.mobile.MediaState" type-generic-aware="com.adobe.mobile.MediaState" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="itemClosed" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="lastTrackSegmentNumber" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="length" static="false" transient="false" type="double" type-generic-aware="double" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mediaAd" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mediaAnalytics" static="false" transient="false" type="com.adobe.mobile.MediaAnalytics" type-generic-aware="com.adobe.mobile.MediaAnalytics" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="name" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parentName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parentPod" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parentPodPosition" static="false" transient="false" type="double" type-generic-aware="double" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="playerID" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="playerName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="previousMediaState" static="false" transient="false" type="com.adobe.mobile.MediaState" type-generic-aware="com.adobe.mobile.MediaState" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="timestamp" static="false" transient="false" type="double" type-generic-aware="double" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="trackCalled" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaItem.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="MediaItem.MonitorThread" static="true" visibility="">
+<field deprecated="not deprecated" final="false" name="canceled" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="monitorMediaItem" static="false" transient="false" type="com.adobe.mobile.MediaItem" type-generic-aware="com.adobe.mobile.MediaItem" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaItem.MonitorThread.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MediaSettings" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaSettings" static="false" type="com.adobe.mobile.MediaSettings" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="adSettingsWith" native="false" return="com.adobe.mobile.MediaSettings" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+<parameter name="p4" type="java.lang.String">
+</parameter>
+<parameter name="p5" type="double">
+</parameter>
+<parameter name="p6" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="settingsWith" native="false" return="com.adobe.mobile.MediaSettings" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="CPM" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="channel" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="completeCloseOffsetThreshold" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="isMediaAd" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="length" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="milestones" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="name" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="offsetMilestones" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parentName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parentPod" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parentPodPosition" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="playerID" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="playerName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="segmentByMilestones" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="segmentByOffsetMilestones" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="trackSeconds" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MediaState" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MediaState" static="false" type="com.adobe.mobile.MediaState" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="double">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="long">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="MediaState" static="false" type="com.adobe.mobile.MediaState" visibility="protected">
+<parameter name="p0" type="com.adobe.mobile.MediaState">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getEventType" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimePlayed" native="false" return="double" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimePlayedSinceTrack" native="false" return="double" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimestamp" native="false" return="double" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setEventType" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setOffset" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setTimePlayed" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setTimePlayedSinceTrack" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="double">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="ad" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="clicked" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="complete" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="eventFirstTime" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="eventType" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="length" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mediaEvent" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="milestone" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="name" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="offset" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="offsetMilestone" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="openTime" static="false" transient="false" type="java.util.Date" type-generic-aware="java.util.Date" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="percent" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="playerName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="segment" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="segmentLength" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="segmentNum" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="timePlayed" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Message" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="blacklist" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="clickedThrough" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="description" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initWithPayloadObject" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="org.json.JSONObject">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isBlacklisted" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldShowForVariables" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="show" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="viewed" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="true" name="JSON_CONFIG_ASSETS" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;assets&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_IMAGE_CACHE_DIR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;messageImages&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_JSON_PAYLOAD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;payload&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="assets" static="false" transient="false" type="java.util.ArrayList" type-generic-aware="java.util.ArrayList&lt;java.util.ArrayList&lt;java.lang.String&gt;&gt;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="audiences" static="false" transient="false" type="java.util.ArrayList" type-generic-aware="java.util.ArrayList&lt;com.adobe.mobile.MessageMatcher&gt;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="endDate" static="false" transient="false" type="java.util.Date" type-generic-aware="java.util.Date" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="isVisible" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="messageId" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="orientationWhenShown" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="showOffline" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="showRule" static="false" transient="false" type="com.adobe.mobile.Messages.MessageShowRule" type-generic-aware="com.adobe.mobile.Messages.MessageShowRule" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="startDate" static="false" transient="false" type="java.util.Date" type-generic-aware="java.util.Date" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="triggers" static="false" transient="false" type="java.util.ArrayList" type-generic-aware="java.util.ArrayList&lt;com.adobe.mobile.MessageMatcher&gt;" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.util.HashMap" extends-generic-aware="java.util.HashMap&lt;java.lang.String, java.lang.Class&gt;" final="false" name="Message.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.util.HashMap" extends-generic-aware="java.util.HashMap&lt;java.lang.String, com.adobe.mobile.Messages.MessageShowRule&gt;" final="false" name="Message.2" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.Message" extends-generic-aware="com.adobe.mobile.Message" final="true" name="MessageAlert" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="clearCurrentDialog" native="false" return="void" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initWithPayloadObject" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="org.json.JSONObject">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="show" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="false" name="alertDialog" static="false" transient="false" type="android.app.AlertDialog" type-generic-aware="android.app.AlertDialog" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="cancelButtonText" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="confirmButtonText" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="content" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="title" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="url" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MessageAlert.MessageShower" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="MessageAlert.MessageShower" static="false" type="com.adobe.mobile.MessageAlert.MessageShower" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MessageAlert">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MessageAlert.MessageShower.CancelClickHandler" static="true" visibility="">
+<implements name="android.content.DialogInterface.OnCancelListener" name-generic-aware="android.content.DialogInterface.OnCancelListener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="MessageAlert.MessageShower.CancelClickHandler" static="false" type="com.adobe.mobile.MessageAlert.MessageShower.CancelClickHandler" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MessageAlert">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCancel" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.DialogInterface">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MessageAlert.MessageShower.NegativeClickHandler" static="true" visibility="">
+<implements name="android.content.DialogInterface.OnClickListener" name-generic-aware="android.content.DialogInterface.OnClickListener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="MessageAlert.MessageShower.NegativeClickHandler" static="false" type="com.adobe.mobile.MessageAlert.MessageShower.NegativeClickHandler" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MessageAlert">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.DialogInterface">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MessageAlert.MessageShower.PositiveClickHandler" static="true" visibility="">
+<implements name="android.content.DialogInterface.OnClickListener" name-generic-aware="android.content.DialogInterface.OnClickListener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="MessageAlert.MessageShower.PositiveClickHandler" static="false" type="com.adobe.mobile.MessageAlert.MessageShower.PositiveClickHandler" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.MessageAlert">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.DialogInterface">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.Message" extends-generic-aware="com.adobe.mobile.Message" final="true" name="MessageFullScreen" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="initWithPayloadObject" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="org.json.JSONObject">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="show" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="showInRootViewGroup" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="false" name="html" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="messageFullScreenActivity" static="false" transient="false" type="android.app.Activity" type-generic-aware="android.app.Activity" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="replacedHtml" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="rootViewGroup" static="false" transient="false" type="android.view.ViewGroup" type-generic-aware="android.view.ViewGroup" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MessageFullScreen.MessageFullScreenRunner" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="MessageFullScreen.MessageFullScreenRunner" static="false" type="com.adobe.mobile.MessageFullScreen.MessageFullScreenRunner" visibility="protected">
+<parameter name="p0" type="com.adobe.mobile.MessageFullScreen">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="android.webkit.WebViewClient" extends-generic-aware="android.webkit.WebViewClient" final="false" name="MessageFullScreen.MessageFullScreenWebViewClient" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="MessageFullScreen.MessageFullScreenWebViewClient" static="false" type="com.adobe.mobile.MessageFullScreen.MessageFullScreenWebViewClient" visibility="protected">
+<parameter name="p0" type="com.adobe.mobile.MessageFullScreen">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MessageFullScreen.MessageFullScreenWebViewClient.1" static="false" visibility="">
+<implements name="android.view.animation.Animation.AnimationListener" name-generic-aware="android.view.animation.Animation.AnimationListener">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="onAnimationEnd" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.animation.Animation">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onAnimationRepeat" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.animation.Animation">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onAnimationStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.animation.Animation">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.AdobeMarketingActivity" extends-generic-aware="com.adobe.mobile.AdobeMarketingActivity" final="false" name="MessageFullScreenActivity" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MessageFullScreenActivity" static="false" type="com.adobe.mobile.MessageFullScreenActivity" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="false" name="message" static="false" transient="false" type="com.adobe.mobile.MessageFullScreen" type-generic-aware="com.adobe.mobile.MessageFullScreen" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MessageFullScreenActivity.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.Message" extends-generic-aware="com.adobe.mobile.Message" final="true" name="MessageLocalNotification" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="initWithPayloadObject" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="org.json.JSONObject">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="show" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="false" name="content" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="localNotificationDelay" static="false" transient="false" type="java.lang.Integer" type-generic-aware="java.lang.Integer" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MessageMatcher" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="matchesInMaps" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="tryParseDouble" native="false" return="java.lang.Double" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="key" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="values" static="false" transient="false" type="java.util.ArrayList" type-generic-aware="java.util.ArrayList&lt;java.lang.Object&gt;" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.util.HashMap" extends-generic-aware="java.util.HashMap&lt;java.lang.String, java.lang.Class&gt;" final="false" name="MessageMatcher.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="false" name="MessageMatcherContains" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="true" name="MessageMatcherEndsWith" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="false" name="MessageMatcherEquals" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="false" name="MessageMatcherExists" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matchesInMaps" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;...">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="true" name="MessageMatcherGreaterThan" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="true" name="MessageMatcherGreaterThanOrEqual" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="true" name="MessageMatcherLessThan" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="true" name="MessageMatcherLessThanOrEqual" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcherContains" extends-generic-aware="com.adobe.mobile.MessageMatcherContains" final="true" name="MessageMatcherNotContains" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcherEquals" extends-generic-aware="com.adobe.mobile.MessageMatcherEquals" final="true" name="MessageMatcherNotEquals" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcherExists" extends-generic-aware="com.adobe.mobile.MessageMatcherExists" final="false" name="MessageMatcherNotExists" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matchesInMaps" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;...">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="true" name="MessageMatcherStartsWith" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matches" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.adobe.mobile.MessageMatcher" extends-generic-aware="com.adobe.mobile.MessageMatcher" final="false" name="MessageMatcherUnknown" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="matchesInMaps" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;...">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="android.content.BroadcastReceiver" extends-generic-aware="android.content.BroadcastReceiver" final="false" name="MessageNotificationHandler" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MessageNotificationHandler" static="false" type="com.adobe.mobile.MessageNotificationHandler" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onReceive" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="android.content.Intent">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Messages" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="checkForInAppMessage" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLargeIconResourceId" native="false" return="int" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSmallIconResourceId" native="false" return="int" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="resetAllInAppMessages" native="false" return="void" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLargeIconResourceId" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSmallIconResourceId" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="MESSAGE_ACTION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;In-App Message&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_CLICKED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.message.clicked&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.message.id&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_LOCAL_ADB_CODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;adbMessageCode&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_LOCAL_IDENTIFIER" static="true" transient="false" type="java.lang.Integer" type-generic-aware="java.lang.Integer" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_LOCAL_PAYLOAD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;alarm_message&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_LOCAL_REQUEST_CODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;requestCode&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_TOKEN_LIFETIME_VALUE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;{lifetimeValue}&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_TOKEN_MESSAGE_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;{messageId}&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_TOKEN_TRACKING_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;{trackingId}&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_TOKEN_USER_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;{userId}&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_VIEWED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.message.viewed&quot;" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Messages.1" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Messages.2" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.adobe.mobile.Messages.MessageShowRule&gt;" final="true" name="Messages.MessageShowRule" static="true" visibility="protected">
+<method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.adobe.mobile.Messages.MessageShowRule" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.adobe.mobile.Messages.MessageShowRule[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="MESSAGE_SHOW_RULE_ALWAYS" static="true" transient="false" type="com.adobe.mobile.Messages.MessageShowRule" type-generic-aware="com.adobe.mobile.Messages.MessageShowRule" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_SHOW_RULE_ONCE" static="true" transient="false" type="com.adobe.mobile.Messages.MessageShowRule" type-generic-aware="com.adobe.mobile.Messages.MessageShowRule" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_SHOW_RULE_UNKNOWN" static="true" transient="false" type="com.adobe.mobile.Messages.MessageShowRule" type-generic-aware="com.adobe.mobile.Messages.MessageShowRule" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_SHOW_RULE_UNTIL_CLICK" static="true" transient="false" type="com.adobe.mobile.Messages.MessageShowRule" type-generic-aware="com.adobe.mobile.Messages.MessageShowRule" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MobileConfig" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="downloadRemoteConfigs" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getAamServer" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBatchLimit" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCharacterSet" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getClientCode" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDefaultLocationTimeout" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getInAppMessageURL" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getInAppMessages" native="false" return="java.util.ArrayList&lt;com.adobe.mobile.Message&gt;" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLifecycleTimeout" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOfflineTrackingEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPointsOfInterest" native="false" return="java.util.List&lt;java.util.List&lt;java.lang.Object&gt;&gt;" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPrivacyStatus" native="false" return="com.adobe.mobile.MobilePrivacyStatus" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getReferrerTimeout" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getReportSuiteIds" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSSL" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTrackingServer" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="mobileUsingAnalytics" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="mobileUsingAudienceManager" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="mobileUsingTarget" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrivacyStatus" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="com.adobe.mobile.MobilePrivacyStatus">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setUserDefinedConfigPath" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.io.InputStream">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updateMessagesData" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updatePOIData" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.2" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.3" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.4" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.4.1" static="false" visibility="">
+<implements name="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock" name-generic-aware="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.5" static="false" visibility="">
+<implements name="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock" name-generic-aware="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.5.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MobileConfig.6" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.adobe.mobile.MobilePrivacyStatus&gt;" final="true" name="MobilePrivacyStatus" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.adobe.mobile.MobilePrivacyStatus" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.adobe.mobile.MobilePrivacyStatus[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="MOBILE_PRIVACY_STATUS_OPT_IN" static="true" transient="false" type="com.adobe.mobile.MobilePrivacyStatus" type-generic-aware="com.adobe.mobile.MobilePrivacyStatus" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MOBILE_PRIVACY_STATUS_OPT_OUT" static="true" transient="false" type="com.adobe.mobile.MobilePrivacyStatus" type-generic-aware="com.adobe.mobile.MobilePrivacyStatus" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MOBILE_PRIVACY_STATUS_UNKNOWN" static="true" transient="false" type="com.adobe.mobile.MobilePrivacyStatus" type-generic-aware="com.adobe.mobile.MobilePrivacyStatus" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ReferrerHandler" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="getReferrerProcessed" native="false" return="boolean" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="processIntent" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Intent">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setReferrerProcessed" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ReferrerHandler.1" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RemoteDownload" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="deleteFilesForDirectoryNotInList" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.List&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="deleteFilesInDirectory" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFileForCachedURL" native="false" return="java.io.File" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFileForCachedURL" native="false" return="java.io.File" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadAsync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadAsync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadAsync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+<parameter name="p4" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadAsync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadSync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadSync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadSync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+<parameter name="p4" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remoteDownloadSync" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="com.adobe.mobile.RemoteDownload.RemoteDownloadBlock">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stringIsUrl" native="false" return="boolean" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RemoteDownload.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RemoteDownload.DownloadFileTask" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="requestConnect" native="false" return="java.net.HttpURLConnection" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="RemoteDownload.RemoteDownloadBlock" static="true" visibility="protected">
+<method abstract="true" deprecated="not deprecated" final="false" name="call" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RequestBuilder" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="buildAndSendRequest" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+<parameter name="p2" type="long">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="RequestHandler" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="sendAnalyticsRequest" native="false" return="boolean" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="sendGenericRequest" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="StaticMethods" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="URLEncode" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cleanContextDataDictionary" native="false" return="java.util.Map&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cleanContextDataKey" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="expandTokens" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getAID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getAnalyticsExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getApplicationID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getApplicationVersion" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getApplicationVersionCode" native="false" return="int" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getAudienceExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCacheDirectory" native="false" return="java.io.File" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCarrier" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCurrentActivity" native="false" return="android.app.Activity" static="true" synchronized="false" visibility="protected">
+<exception name="StaticMethods.NullActivityException" type="com.adobe.mobile.StaticMethods.NullActivityException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCurrentOrientation" native="false" return="int" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDebugLogging" native="false" return="boolean" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDefaultAcceptLanguage" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDefaultData" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDefaultUserAgent" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHexString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMediaExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMessageImageCachingExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMessagesExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOperatingSystem" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getResolution" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSharedContext" native="false" return="android.content.Context" static="true" synchronized="false" visibility="protected">
+<exception name="StaticMethods.NullContextException" type="com.adobe.mobile.StaticMethods.NullContextException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSharedExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSharedPreferences" native="false" return="android.content.SharedPreferences" static="true" synchronized="false" visibility="protected">
+<exception name="StaticMethods.NullContextException" type="com.adobe.mobile.StaticMethods.NullContextException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSharedPreferencesEditor" native="false" return="android.content.SharedPreferences.Editor" static="true" synchronized="false" visibility="protected">
+<exception name="StaticMethods.NullContextException" type="com.adobe.mobile.StaticMethods.NullContextException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimeSince1970" native="false" return="long" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimeSinceLaunch" native="false" return="long" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimedActionsExecutor" native="false" return="java.util.concurrent.ExecutorService" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTimestampString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getVisitorID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="hexToString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="join" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Iterable&lt;?&gt;">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="logDebugFormat" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="logErrorFormat" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="logWarningFormat" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="mapFromJson" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="org.json.JSONObject">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="serializeToQueryString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setCurrentActivity" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDebugLogging" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSharedContext" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setVisitorID" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updateLastKnownTimestamp" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.Long">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="HITS_DB_FILE_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ADBMobileDataCache.sqlite&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LAST_KNOWN_TIMESTAMP_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ADBLastKnownTimestampKey&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LIBRARY_VERSION" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4.2.0-AN&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TA_DB_FILE_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ADBMobileTimedActionsCache.sqlite&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TIME_SINCE_LAUNCH_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;a.TimeSinceLaunch&quot;" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="StaticMethods.NullActivityException" static="true" visibility="protected">
+<constructor deprecated="not deprecated" final="false" name="StaticMethods.NullActivityException" static="false" type="com.adobe.mobile.StaticMethods.NullActivityException" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="StaticMethods.NullContextException" static="true" visibility="protected">
+<constructor deprecated="not deprecated" final="false" name="StaticMethods.NullContextException" static="false" type="com.adobe.mobile.StaticMethods.NullContextException" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Target" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Target" static="false" type="com.adobe.mobile.Target" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearCookies" native="false" return="void" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createOrderConfirmRequest" native="false" return="com.adobe.mobile.TargetLocationRequest" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+<parameter name="p4" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createRequest" native="false" return="com.adobe.mobile.TargetLocationRequest" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPcID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSessionID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadRequest" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="com.adobe.mobile.TargetLocationRequest">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.Target.TargetCallback&lt;java.lang.String&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Target.1" static="true" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Target.2" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Target.3" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Target.TargetCallback" static="true" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="call" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="T">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="TargetLocationRequest" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="TargetLocationRequest" static="false" type="com.adobe.mobile.TargetLocationRequest" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createRequestWithOrderConfirm" native="false" return="com.adobe.mobile.TargetLocationRequest" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+<parameter name="p4" type="java.util.Map&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_CATEGORY_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;categoryId&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_MBOX_3RDPARTY_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mbox3rdPartyId&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_MBOX_HOST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mboxHost&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_MBOX_PAGE_VALUE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mboxPageValue&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_MBOX_PC" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mboxPC&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_MBOX_SESSION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mboxSession&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_ORDER_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;orderId&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_ORDER_TOTAL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;orderTotal&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TARGET_PARAMETER_PRODUCT_PURCHASE_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;productPurchasedId&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="defaultContent" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="name" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="parameters" static="false" transient="false" type="java.util.HashMap" type-generic-aware="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="TargetWorker" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="addPersistentParameter" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearCookies" native="false" return="void" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPcID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSessionID" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadCookies" native="false" return="void" static="true" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadRequest" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="com.adobe.mobile.TargetLocationRequest">
+</parameter>
+<parameter name="p1" type="com.adobe.mobile.Target.TargetCallback&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removePersistentParameter" native="false" return="void" static="true" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="COOKIE_EXPIRES_KEY_SUFFIX" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;_Expires&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COOKIE_NAME_PCID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mboxPC&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COOKIE_NAME_SESSION" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mboxSession&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COOKIE_VALUE_KEY_SUFFIX" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;_Value&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOCATION_CONTENT_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;text%2Fplain%3Bcharset%3Dutf-8&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOCATION_SERVER_PREFIX" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;http://&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOCATION_SERVER_SUFFIX" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;.tt.omtrdc.net&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOCATION_SESSION_STRING" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&amp;mboxSession=%s&amp;mboxPC=%s&amp;mboxXDomain=disabled&quot;" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="TargetWorker.1" static="true" visibility="">
+<implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;" static="false" synchronized="false" visibility="public">
+<exception name="Exception" type="java.lang.Exception">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="TargetWorker.SendRequestTask" static="true" visibility="protected">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+</api>
